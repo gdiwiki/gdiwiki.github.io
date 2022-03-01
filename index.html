@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Download Monoxide</title>
+<style>
+a:hover {
+	opacity:0.6;
+}
+html {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #70bg32;
+    background-repeat: no-repeat;
+    background: -webkit-linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+    background: -moz-linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+    background: -ms-linear-gradient(315deg, #000000 0%, #b82e1f 74%;
+    background: -o-linear-gradient315deg, #000000 0%, #b82e1f 74%);
+    background: linear-gradient(315deg, #000000 0%, #b82e1f 74%);
+}
+h1 {
+  text-shadow: 0 0 3px #000000;
+  color:white;
+  family-font:'Arial';
+}
+h1.bot {
+	position:fixed;
+    bottom:0;
+    left: calc(50% - 20px);
+    family-font:'Arial';
+    font-size:20px;
+}
+h1.out {
+	-webkit-text-stroke: 0.7px black;
+    font-size:4rem;
+    position: absolute;
+    top:-5%;
+    width: 100%;
+    left:0;
+}
+</style>
+</head>
+<body>
+<center>
+
+<h1 class="out">
+GDI Wiki
+</h1>
+<h1 class="bot" style="-webkit-text-stroke: 0.3px black;">
+GdiWiki<br><a href="https://gdiwiki.github.io/">Home</a>
+</h1>
+</center>
+<script>
+function sleep(time) { 
+	return new Promise(resolve => setTimeout(resolve,time));
+}
+async function background_rot() {
+	for (let i = 0; i < 361; i++) {
+    	document.body.style.background = 'linear-gradient('+i+'deg, #000000 0%, #b82e1f '+i+'%)';
+        await sleep(1);
+    }
+}
+background_rot();
+</script>
+</body>
+</html>
